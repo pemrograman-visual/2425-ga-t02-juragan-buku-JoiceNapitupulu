@@ -1,6 +1,5 @@
 // 12S24020 - Joice Anastasya Napitupulu
 // 12S24014 - Arion Dippos Pandapotan Manurung
-
 import java.util.*;
 import java.lang.Math;
 
@@ -15,24 +14,24 @@ public class T02 {
         isbn = input.nextLine();
         judul = input.nextLine();
         penulis = input.nextLine();
-        tahunterbit = input.nextInt();
+        tahunterbit = Integer.parseInt(input.nextLine());
         penerbit = input.nextLine();
         formatbuku = input.nextLine();
-        hargapembelian = input.nextDouble();
-        minimummargin = input.nextDouble();
-        stok = input.nextInt();
-        rating = input.nextDouble();
+        hargapembelian = Double.parseDouble(input.nextLine());
+        minimummargin = Double.parseDouble(input.nextLine());
+        stok = Integer.parseInt(input.nextLine());
+        rating = Double.parseDouble(input.nextLine());
         kualitas = "";
         if (rating >= 4.7) {
             kualitas = "Best Pick";
         } else {
-            if (rating >= 4.5) {
+            if (rating >= 4.5 && rating < 4.7) {
                 kualitas = "Must Read";
             } else {
-                if (rating >= 4.0) {
+                if (rating >= 4.0 && rating < 4.5) {
                     kualitas = "Recommend";
                 } else {
-                    if (rating >= 3.0) {
+                    if (rating >= 3.0 && rating < 4.0) {
                         kualitas = "Average";
                     } else {
                         if (rating < 3.0) {
@@ -49,4 +48,3 @@ public class T02 {
         return String.format("%." + digits + "f", value);
     }
 }
-
